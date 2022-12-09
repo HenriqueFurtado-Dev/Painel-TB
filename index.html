@@ -17,6 +17,8 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+
 </head>
 <body>
 
@@ -31,11 +33,28 @@
             </ul>
         </nav>
         
-        <button>Workstation</button>
+        <button class="popup-trigger">Workstation</button>
 
+        
     </aside>
 
     <main>
+
+        <!-- START - POPUP EDITOR -->
+        <div class="popup">
+            <div class="popup__content">
+                <div class="popup__body">
+                    <button class="popup__close" type="button" ></button>
+
+                        <div class="editor-container">
+                        <div id="editor"> /* Adicione, remova e edite seu código por aqui */ </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END - POPUP EDITOR -->
+
         <section class="banner">
             <div class="banner-title">
                 <h2>The best place to build, test,<br> and discover front-end code.</h2>
@@ -83,15 +102,31 @@
 
                 <!-- 3D objsect -->
                 <!-- This inserts the 3D object inside the aside container -->
-                <model-viewer src="assets/HTC_Vive_Headset.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+                <model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
 
-                <textarea id="to-copy" spellcheck="false">Write something and copy it into your clipboard by clicking in the button below.Write something and copy it into your clipboard by clicking in the button below.</textarea>
+                <textarea id="to-copy" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
                 <button id="copy" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
                 
             </div>
-            <div class="box-globes"></div>
-            <div class="box-globes"></div>
+            <div class="box-globes">
+                <!-- 3D objsect -->
+                <!-- This inserts the 3D object inside the aside container -->
+                <model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea id="to-copy" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
+                <button id="copy" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
+            </div>
+            <div class="box-globes">
+                <!-- 3D objsect -->
+                <!-- This inserts the 3D object inside the aside container -->
+                <model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea id="to-copy" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
+                <button id="copy" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
+            </div>
         </section>
+
+        
         
     </main>
 
