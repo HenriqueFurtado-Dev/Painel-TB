@@ -11,6 +11,11 @@
 
     <!-- IMPORTS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
 </head>
 <body>
@@ -38,7 +43,7 @@
                 <div class="box-section">
                     <!-- START - Box icon -->
                     <div class="box">
-                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <i class="fa-regular fa-clipboard fa-flip" ></i>
                         <h2>Build & Test</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquid quam corrupti dolorum nam modi nostrum magni </p>
                         <button>Saiba mais</button>
@@ -47,7 +52,7 @@
 
                     <!-- START - Box icon -->
                     <div class="box">
-                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <i class="fa-sharp fa-solid fa-code"></i>
                         <h2>Build & Test</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquid quam corrupti dolorum nam modi nostrum magni </p>
                         <button>Saiba mais</button>
@@ -56,7 +61,7 @@
 
                     <!-- START - Box icon -->
                     <div class="box">
-                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <i class="fa-sharp fa-solid fa-circle-down"></i>
                         <h2>Build & Test</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquid quam corrupti dolorum nam modi nostrum magni </p>
                         <button>Saiba mais</button>
@@ -65,12 +70,27 @@
                 </div>
             </div>
             <div class="banner-hero">
-                <img src="https://images.unsplash.com/photo-1554435493-93422e8220c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="">
+                <img class="img-hero" src="assets/img/code.jpg" alt="">
                 <div class="content">
                     <h2>Título</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, ipsa accusantium. Cum quisquam distinctio dolorem tempora, quo itaque quis optio possimus magni provident iure tenetur reiciendis consequatur animi consequuntur at?</p>
                 </div>
             </div>
+        </section>
+        
+        <section class="globes">
+            <div class="box-globes">
+
+                <!-- 3D objsect -->
+                <!-- This inserts the 3D object inside the aside container -->
+                <model-viewer src="assets/HTC_Vive_Headset.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea id="to-copy" spellcheck="false">Write something and copy it into your clipboard by clicking in the button below.Write something and copy it into your clipboard by clicking in the button below.</textarea>
+                <button id="copy" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
+                
+            </div>
+            <div class="box-globes"></div>
+            <div class="box-globes"></div>
         </section>
         
     </main>
