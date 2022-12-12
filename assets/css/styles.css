@@ -183,6 +183,8 @@ main {
   /* END - BACKGROUNDS */
   /* START - CODEPEN */
   /* END - CODEPEN */
+  /* START - PLUGINS */
+  /* END - PLUGINS */
 }
 main .title-section {
   display: flex;
@@ -487,7 +489,42 @@ main .codepen {
 main .codepen iframe {
   margin: 20px 0;
 }
+main .plugins {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main .plugins .logo-plugin {
+  background-color: #262B32;
+  padding: 20px 50px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+main .plugins .logo-plugin:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 20px #F66822;
+}
+main .plugins .logo-plugin img {
+  width: 150px;
+}
+main .plugins .logo-plugin .wprocket {
+  border-radius: 250px;
+}
 
 /* END -  Main CSS */
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #F66822;
+  padding: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #F66822;
+  font-size: 20px;
+}
 
 /*# sourceMappingURL=styles.css.map */
