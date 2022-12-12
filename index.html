@@ -8,36 +8,45 @@
 
     <!-- LINKS CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/rocket.css">
+    <link rel="stylesheet" href="cookie/cookie.css">
 
-    <!-- IMPORTS -->
+    <!-- IMPORTS CDN js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+
     <!--Imports a model-viewer JavaScript code -->
-    <!--It helps to handle how the 3D Object would be displayed -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
 
 </head>
 <body>
 
+    <!-- ----- START - BARRA LATERAL ------ -->
     <aside>
         <img class="logo" src="assets/img/logo.png" alt="">
 
         <nav>
             <ul>
-                <li><a href="#">Globos</a></li>
-                <li><a href="#">Codes</a></li>
-                <li><a href="#">Iframes</a></li>
+                <li><a href="#globos">Globos</a></li>
+                <li><a href="#backgrounds">Backgrounds</a></li>
+                <li><a href="#cookies">Cookies</a></li>
+                <li><a href="#codepen">CODEPEN</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#iframes">Iframes</a></li>
+                <li><a href="#Plugins">Plugins</a></li>
             </ul>
         </nav>
-        
+
+        <!--  popup botão  -->
         <button class="popup-trigger">Workstation</button>
 
         
     </aside>
 
+    <!-- ----- END - BARRA LATERAL ------ -->
+
+    <!-- ----- START - MAIN ------ -->
     <main>
 
         <!-- START - POPUP EDITOR -->
@@ -45,7 +54,7 @@
             <div class="popup__content">
                 <div class="popup__body">
                     <button class="popup__close" type="button" ></button>
-
+                        <!-- ----- DIV que puxa a API - Dentro do Script.js ------ -->
                         <div class="editor-container">
                         <div id="editor"> /* Adicione, remova e edite seu código por aqui */ </div>
                         </div>
@@ -55,84 +64,267 @@
         </div>
         <!-- END - POPUP EDITOR -->
 
+        <!-- ----- START - BANNER ------ -->
         <section class="banner">
             <div class="banner-title">
-                <h2>The best place to build, test,<br> and discover front-end code.</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum dolorem natus laborum quisquam repellendus aperiam consequuntur consectetur ipsam cupiditate sint nam quasi, repudiandae odio architecto enim voluptas, aliquid nesciunt quis!</p>
+                <div class="banner-title-content">
+                    <h2>Seja bem vindo ao repositório<br> de códigos da <span class="title-orange"> THINKBEYOND </span> </h2>
+                    <p>Criamos esse repositório para facilitar o acesso a conteúdos de códigos na implementação em nossos sites, então desde documentações e APIS, até mesmo iframes e códigos pré-formatados para facilitar a inserção no dia a dia, o projeto estará em desenvolvimento por um longo período. </p>    
+                </div>
+
+                <!-- START - ICONS -->
                 <div class="box-section">
                     <!-- START - Box icon -->
                     <div class="box">
-                        <i class="fa-regular fa-clipboard fa-flip" ></i>
-                        <h2>Build & Test</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquid quam corrupti dolorum nam modi nostrum magni </p>
-                        <button>Saiba mais</button>
+                        <i class="fa-regular fa-clipboard " ></i>
+                        <h2>Construa</h2>
+                        <p> Copie o código pronto ou utilize nossa workstation para editar seu código </p>
                     </div>
                     <!-- END - Box icon -->
 
                     <!-- START - Box icon -->
                     <div class="box">
                         <i class="fa-sharp fa-solid fa-code"></i>
-                        <h2>Build & Test</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquid quam corrupti dolorum nam modi nostrum magni </p>
-                        <button>Saiba mais</button>
+                        <h2>Teste</h2>
+                        <p>Utilize nossa workstation para customizar o código da sua maneira </p>
                     </div>
                     <!-- END - Box icon -->
 
                     <!-- START - Box icon -->
                     <div class="box">
                         <i class="fa-sharp fa-solid fa-circle-down"></i>
-                        <h2>Build & Test</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, aliquid quam corrupti dolorum nam modi nostrum magni </p>
-                        <button>Saiba mais</button>
+                        <h2>Use</h2>
+                        <p>Copie o código completamente e baixa também os anexos </p>
                     </div>
                     <!-- END - Box icon -->
                 </div>
+                <!-- END - ICONS -->
             </div>
             <div class="banner-hero">
-                <img class="img-hero" src="assets/img/code.jpg" alt="">
                 <div class="content">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, ipsa accusantium. Cum quisquam distinctio dolorem tempora, quo itaque quis optio possimus magni provident iure tenetur reiciendis consequatur animi consequuntur at?</p>
+                    <h2>Conheça mais</h2>
+                    <p>Criado por Henrique F, para que você possa decolar ainda mais alto. 🚀 </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- ----- START - ROCKET ------ -->
+        <div class="rocket">
+            <div class="rocket-body">
+              <div class="body"></div>
+              <div class="fin fin-left"></div>
+              <div class="fin fin-right"></div>
+              <div class="window"></div>
+            </div>
+            <div class="exhaust-flame"></div>
+            <ul class="exhaust-fumes">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <ul class="star">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+        </div>
+        <!-- ----- END - ROCKET ------ -->
+        <!-- ----- END - BANNER ------ -->
+
+    <!-- ----- START - Seção de Título ------ -->
+    <section id="globos" class="title-section">
+        <h2>Globos Model 3D</h2>
+        <div class="divider"></div>
+        <p>Todos os globos são feitos com a API <a href="https://modelviewer.dev/"> Model Viewer </a> e os modelos 3Ds retirados do <a href="https://sketchfab.com/"> Sketchfab </a> </p>
+    </section>
+    <!-- ----- END - Seção de Título ------ -->
+
+        <!-- ----- START - Seção de Globos------ -->
+        <section class="globes">
+
+            <!-- ----- START - Box Globe 1 ------ -->
+            <div class="box-globes">
+                <model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea class="to-copy" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
+                <button class="copy" type="button"> Copiar código</button>  
+            </div>
+            <!-- ----- END - Box Globe 1 ------ -->
+            <!-- ----- START - Box Globe 2 ------ -->
+            <div class="box-globes">
+                <model-viewer src="assets/models/moon.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea class="to-copy2" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
+                <button class="copy2" type="button"> Copiar código </button>
+            </div>
+            <!-- ----- END - Box Globe 2 ------ -->
+            <!-- ----- START - Box Globe 3 ------ -->
+            <div class="box-globes">
+                <model-viewer src="assets/models/globe-line-blues.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea class="to-copy3" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
+                <button class="copy3" type="button"> Copiar código</button>
+            </div>
+            <!-- ----- END - Box Globe 3 ------ -->
+        </section>
+
+        <!-- ----- LINHA 2 - Seção de Globos ------ -->
+
+        <section class="globes">
+             <!-- ----- START - Box Globe 4 ------ -->
+            <div class="box-globes">
+                <model-viewer src="assets/models/earthquakes_-_2000_to_2019.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea class="to-copy4" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+                </textarea>
+                <button class="copy4" type="button"> Copiar código </button>
+            </div>
+            <!-- ----- END - Box Globe 4 ------ -->
+            <!-- ----- START - Box Globe 5 ------ -->
+            <div class="box-globes">
+                <model-viewer src="assets/models/earth_low_poly.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea class="to-copy5" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
+                <button class="copy5" type="button"> Copiar código</button>
+            </div>
+            <!-- ----- END - Box Globe 5 ------ -->
+            <!-- ----- START - Box Globe 6 ------ -->
+            <div class="box-globes">
+                <model-viewer src="assets/models/earth-cute.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
+
+                <textarea class="to-copy6" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
+                <button class="copy6" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
+            </div>
+            <!-- ----- END - Box Globe 6 ------ -->
+
+        </section>
+
+        <!-- ----- END - Seção de Globos------ -->
+        
+        <!-- ----- START - Section Backgrounds ------ -->
+        <section id="backgrounds" class="title-section">
+            <h2>Backgrounds</h2>
+            <div class="divider"></div>
+            <p> Geradores e sites para Backgrounds e divisores </p>
+        </section>
+
+        <section class="backgrounds">
+            <a target="_blank" href="https://getwaves.io/"> <img src="assets/img/bgs/Bgs-1.png" alt=""> </a>
+            <a target="_blank"  href="https://www.softr.io/tools/svg-wave-generator"> <img src="assets/img/bgs/Bgs-2.png" alt=""></a>
+            <a target="_blank"  href="https://cssgradient.io/"><img src="assets/img/bgs/Bgs-3.png" alt=""> </a>
+            <a target="_blank"  href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/"> <img src="assets/img/bgs/Bgs-4.png" alt=""></a>
+        </section>
+        <!-- ----- END - Section Backgrounds ------ -->
+
+        <!-- ----- START - Section Cookies ------ -->
+        <section id="cookies" class="title-section">
+            <h2>Cookie para sites HTML</h2>
+            <div class="divider"></div>
+            <p> Arquivo pronto com HTML, CSS e JS para ser inseridos em sites HTMLs </p>
+        </section>
+        
+        <section class="popup-section">
+            <div class="text-section">
+                <p>Baixe o arquivo .ZIP no botão abaixo, carregue a pasta para o site, em seguida acesse o arquivo HTML copie a DIV Wrapper e cole abaixo do body, faça as chamadas ao CSS e ao JS e por fim insira o link da página de política de privacidade</p>
+                <div class="buttons">
+                    <a href="cookie/cookie.zip">Baixar ZIP</a>
+                    <a target="_blank" href="https://www.ramirolobo.com/gerador-de-politica-de-privacidade-lgpd/">Gerador de Política de privacidade</a>
+                </div>
+            </div>
+            <div class="popup-right">
+                <div class="wrapper">
+                    <div class="content">
+                      <header>Cookies</header>
+                      <p>Esse site utiliza cookies para melhorar a sua experiência de navegação.</p>
+                      <div class="buttons">
+                        <button class="item">Eu aceito</button>
+                
+                        <!-- Inserir link da página de privacidade -->
+                        <a href="#" class="item">Saiba mais</a>
+                      </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section class="globes">
-            <div class="box-globes">
+        <!-- ----- END - Section Cookies ------ -->
 
-                <!-- 3D objsect -->
-                <!-- This inserts the 3D object inside the aside container -->
-                <model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
 
-                <textarea id="to-copy" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
-                <button id="copy" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
-                
-            </div>
-            <div class="box-globes">
-                <!-- 3D objsect -->
-                <!-- This inserts the 3D object inside the aside container -->
-                <model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
-
-                <textarea id="to-copy" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
-                <button id="copy" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
-            </div>
-            <div class="box-globes">
-                <!-- 3D objsect -->
-                <!-- This inserts the 3D object inside the aside container -->
-                <model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
-
-                <textarea id="to-copy" spellcheck="false"><model-viewer src="assets\models\earth.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer></textarea>
-                <button id="copy" type="button"> Copiar código <span class="copiedtext" aria-hidden="true">Copied</span></button>
-            </div>
+        <!-- ----- START - Section CODEPEN ------ -->
+        <section id="codepen" class="title-section">
+            <h2>Implementações Legais CODEPEN </h2>
+            <div class="divider"></div>
+            <p> Códigos prontos do <a target="_blank" href="https://codepen.io/"> CODEPEN </a> que podemos utilizar para formar ideias </p>
         </section>
 
-        
-        
-    </main>
+        <section class="codepen">
+            <!-- ----- START - IFRAME 1------ -->   
+            <iframe height="500" style="width: 100%;" scrolling="no" title="500 Error Page Challenge" src="https://codepen.io/Kxrl/embed/BOPNXN?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/Kxrl/pen/BOPNXN">
+                500 Error Page Challenge</a> by Karl (<a href="https://codepen.io/Kxrl">@Kxrl</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <!-- ----- END - IFRAME 1------ -->   
 
+            <!-- ----- START - IFRAME 2------ -->   
+            <iframe height="500" style="width: 100%;" scrolling="no" title="CSS only animated rocket" src="https://codepen.io/eva_trostlos/embed/aZQoLN?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/eva_trostlos/pen/aZQoLN">
+                CSS only animated rocket</a> by Eva Lettner (<a href="https://codepen.io/eva_trostlos">@eva_trostlos</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <!-- ----- END - IFRAME 2 ------ -->   
+
+            <!-- ----- START - IFRAME 3 ------ -->   
+            <iframe height="500" style="width: 100%;" scrolling="no" title="Servers" src="https://codepen.io/Biuni/embed/MpZvQg?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/Biuni/pen/MpZvQg">
+                Servers</a> by Gianluca Bonifazi (<a href="https://codepen.io/Biuni">@Biuni</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <!-- ----- END - IFRAME 3 ------ -->   
+
+            <!-- ----- START - IFRAME 4 ------ -->   
+            <iframe height="500" style="width: 100%;" scrolling="no" title="3D Room - Pure CSS" src="https://codepen.io/ricardoolivaalonso/embed/mdPzrpe?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/ricardoolivaalonso/pen/mdPzrpe">
+                3D Room - Pure CSS</a> by Ricardo Oliva Alonso (<a href="https://codepen.io/ricardoolivaalonso">@ricardoolivaalonso</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <!-- ----- END - IFRAME 4 ------ -->   
+        </section>
+        <!-- ----- END - Section CODEPEN ------ -->
+
+
+        <!-- ----- START - PLUGINS ------ -->
+        <section id="plugins" class="title-section">
+            <h2>Plugins Wordpress</h2>
+            <div class="divider"></div>
+            <p>Plugins premiums para você criar um site de outro mundo</p>
+        </section>
+        <section class="plugins">
+
+        </section>
+        <!-- ----- END - PLUGINS------ -->
+
+
+    </main>
+    <!-- ----- END - MAIN ------ -->
     
+
+
     <!-- LINK JS -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/copy.js"></script>
+    <script src="cookie/cookie.js"></script>
+
 
 </body>
 </html>

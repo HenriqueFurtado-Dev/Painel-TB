@@ -1,268 +1,6 @@
 @charset "UTF-8";
-/* Imports */
+/* Imports FONTS / VARIABLES */
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700&family=Bree+Serif&display=swap");
-/* START - Configurações Gerais */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #131416;
-  font-family: "Baloo Thambi 2", cursive;
-  position: relative;
-}
-
-p,
-button,
-a,
-textarea {
-  font-family: "Baloo Thambi 2", cursive;
-}
-
-/* END - Configurações Gerais */
-/* START - Main CSS */
-aside {
-  background-color: #1C1D22;
-  width: 12%;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  padding: 0px 10px;
-  border-right: 2px solid #F66822;
-  box-shadow: 1px 1px 10px rgba(246, 105, 34, 0.3294117647);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-aside .logo {
-  width: 200px;
-  margin: 30px 0;
-}
-aside nav {
-  width: 100%;
-  margin-left: 30px;
-}
-aside nav ul {
-  list-style: none;
-}
-aside nav ul li a {
-  text-decoration: none;
-  font-size: 20px;
-  color: rgb(197, 197, 197);
-}
-aside button {
-  background-color: #313131;
-  color: #F66822;
-  border: 2px solid #F66822;
-  padding: 10px 30px;
-  border-radius: 8px;
-  font-family: "Baloo Thambi 2", cursive;
-  text-transform: uppercase;
-  box-shadow: 2px 2px 10px #F66822;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  cursor: pointer;
-}
-
-main {
-  width: 88%;
-  right: 0;
-  top: 0;
-  position: absolute;
-  padding: 50px;
-  /* START - POPUP */
-  /* END - POPUP */
-}
-main .editor-container {
-  width: 700px;
-  height: 540px;
-  margin: 20px auto;
-  position: relative;
-}
-main #editor {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
-}
-main .banner {
-  display: flex;
-  width: 100%;
-  /* Banner Content */
-  /* Banner IMG */
-}
-main .banner .banner-title {
-  width: 100%;
-}
-main .banner .banner-title h2 {
-  font-size: 50px;
-  color: white;
-  line-height: 45px;
-}
-main .banner .banner-title p {
-  color: white;
-  line-height: 25px;
-  margin-top: 30px;
-}
-main .banner .banner-title .box-section {
-  width: 100vw;
-  max-width: 100%;
-  display: flex;
-  margin-top: 60px;
-}
-main .banner .banner-title .box-section .box {
-  width: 33%;
-  background-color: #262B32;
-  margin: 10px;
-  padding: 20px;
-  padding-top: 50px;
-  position: relative;
-  border-radius: 10px;
-}
-main .banner .banner-title .box-section .box h2 {
-  font-size: 30px;
-}
-main .banner .banner-title .box-section .box p {
-  font-size: 16px;
-  margin: 0;
-}
-main .banner .banner-title .box-section .box i {
-  background-color: #131416;
-  font-size: 46px;
-  position: absolute;
-  top: -30px;
-  padding: 10px;
-  color: white;
-  border-radius: 8px;
-}
-main .banner .banner-title .box-section .box button {
-  background-color: #3B404C;
-  border: none;
-  padding: 10px 30px;
-  margin-top: 15px;
-  color: white;
-}
-main .banner div {
-  width: 50%;
-  max-width: 50%;
-}
-main .banner img {
-  border-radius: 12px;
-}
-main .banner .banner-hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-main .banner .banner-hero .content {
-  position: absolute;
-  width: 300px;
-  background-color: white;
-  right: 10%;
-  padding: 50px;
-  border-radius: 10px 20px 10px 20px;
-}
-main .banner .banner-hero .img-hero {
-  width: 400px;
-  height: 600px;
-  object-fit: cover;
-}
-main .globes {
-  padding: 120px 0;
-  display: flex;
-  /* Just to play with animations */
-}
-main .globes h2 {
-  color: white;
-  font-size: 44px;
-  margin-bottom: 30px;
-  width: 100%;
-}
-main .globes .box-globes {
-  width: 33%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #262B32;
-  padding: 30px;
-  margin: 15px;
-  border-radius: 25px;
-}
-main .globes .box-globes model-viewer {
-  height: 300px;
-  width: 300px;
-  border: none;
-}
-main .globes .box-globes textarea {
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  height: 250px;
-  margin: 20px;
-  background: #131416;
-  border: 1px solid #ddd;
-  padding: 10px 15px;
-  border-radius: 10px;
-  resize: none;
-  color: white;
-}
-main .globes .box-globes [id=cleared] {
-  margin-top: 4em;
-}
-main .globes .box-globes textarea:focus {
-  border-color: #8fa423;
-}
-main .globes .box-globes button {
-  position: relative;
-  padding: 8px 20px;
-  border: 0;
-  font-size: 0.835em;
-  text-transform: uppercase;
-  letter-spacing: 0.125em;
-  font-weight: bold;
-  color: #FFF;
-  background: #131416;
-  transition: background 0.275s;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px #F66822;
-}
-main .globes .box-globes button:hover,
-main .globes .box-globes button:focus {
-  background: #74861A;
-}
-main .globes .box-globes p {
-  margin-top: 3.25em;
-  font-size: 0.825em;
-  color: #777;
-  font-weight: bold;
-  letter-spacing: 0.01em;
-}
-main .globes .copiedtext {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(-1em);
-  color: #000;
-  transition: all 0.5s;
-}
-main .globes .copied .copiedtext {
-  opacity: 1;
-  transform: translateY(-2em);
-}
-
-/* END -  Main CSS */
 .popup {
   position: fixed;
   inset: 0;
@@ -347,5 +85,409 @@ main .globes .copied .copiedtext {
   transform: scale(1);
   transition: all 0.3s ease 0.2s;
 }
+.popup .section-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}
+.popup .section-pdf h2 {
+  color: white;
+}
+
+/* START - RESETS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #131416;
+  font-family: "Baloo Thambi 2", cursive;
+  position: relative;
+}
+
+p,
+button,
+a,
+textarea {
+  font-family: "Baloo Thambi 2", cursive;
+  text-decoration: none;
+}
+
+/* END - RESETS */
+/* START - Main CSS */
+/* START - Barra lateral */
+aside {
+  background-color: #1C1D22;
+  width: 12%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  padding: 0px 10px;
+  border-right: 2px solid #F66822;
+  box-shadow: 1px 1px 10px rgba(246, 105, 34, 0.3294117647);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+aside .logo {
+  width: 200px;
+  margin: 30px 0;
+}
+aside nav {
+  width: 100%;
+  margin-left: 30px;
+}
+aside nav ul {
+  list-style: none;
+}
+aside nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(197, 197, 197);
+}
+aside button {
+  background-color: #313131;
+  color: #F66822;
+  border: 2px solid #F66822;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-family: "Baloo Thambi 2", cursive;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 10px #F66822;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  cursor: pointer;
+}
+
+/* END - Barra lateral */
+/* START - MAIN CSS */
+main {
+  width: 88%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  padding: 50px;
+  /* START - Seções com título GLOBAL */
+  /* END - Seções com título GLOBAL */
+  /* START - POPUP */
+  /* END - POPUP */
+  /* START - BANNER */
+  /* END - BANNER */
+  /* START - GLOBES */
+  /* END - GLOBES */
+  /* START - BACKGROUNDS */
+  /* END - BACKGROUNDS */
+  /* START - CODEPEN */
+  /* END - CODEPEN */
+}
+main .title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 30px;
+  color: white;
+}
+main .title-section h2 {
+  font-size: 44px;
+}
+main .title-section .divider {
+  background-color: #F66822;
+  width: 60px;
+  height: 5px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+main .title-section p {
+  font-size: 20px;
+}
+main .title-section a {
+  color: #F66822;
+  text-decoration: none;
+}
+main .editor-container {
+  width: 700px;
+  height: 540px;
+  margin: 20px auto;
+  position: relative;
+}
+main #editor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+}
+main .banner {
+  display: flex;
+  width: 100%;
+  height: 98vh;
+  /* Banner Content */
+  /* Banner IMG */
+}
+main .banner .banner-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  justify-content: space-around;
+}
+main .banner .banner-title .banner-title-content {
+  width: 100%;
+  max-width: 100%;
+}
+main .banner .banner-title .banner-title-content .title-orange {
+  color: #F66822;
+  text-shadow: 0px 0px 10px #F66822;
+}
+main .banner .banner-title h2 {
+  font-size: 50px;
+  color: white;
+  line-height: 45px;
+}
+main .banner .banner-title p {
+  color: white;
+  line-height: 25px;
+  margin-top: 30px;
+}
+main .banner .banner-title .box-section {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  margin-top: 60px;
+}
+main .banner .banner-title .box-section .box {
+  width: 33%;
+  background-color: #262B32;
+  margin: 10px;
+  padding: 20px;
+  padding-top: 50px;
+  position: relative;
+  border-radius: 10px;
+}
+main .banner .banner-title .box-section .box h2 {
+  font-size: 30px;
+}
+main .banner .banner-title .box-section .box p {
+  font-size: 16px;
+  margin: 0;
+}
+main .banner .banner-title .box-section .box i {
+  background-color: #131416;
+  font-size: 46px;
+  position: absolute;
+  top: -30px;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
+}
+main .banner .banner-title .box-section .box button {
+  background-color: #3B404C;
+  border: none;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: white;
+}
+main .banner div {
+  width: 50%;
+  max-width: 50%;
+}
+main .banner img {
+  border-radius: 12px;
+}
+main .banner .banner-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .banner .banner-hero .content {
+  position: absolute;
+  width: 300px;
+  background-color: #F66822;
+  right: 0%;
+  top: 45%;
+  padding: 30px;
+  border-radius: 10px 20px 10px 20px;
+  z-index: 99;
+  font-family: "Baloo Thambi 2", cursive;
+}
+main .banner .banner-hero h2, main .banner .banner-hero p {
+  color: white;
+  font-family: "Baloo Thambi 2", cursive;
+  line-height: 20px;
+  font-size: 18px;
+}
+main .globes {
+  display: flex;
+  /* Just to play with animations */
+}
+main .globes h2 {
+  color: white;
+  font-size: 44px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+main .globes .box-globes {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #262B32;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 25px;
+}
+main .globes .box-globes model-viewer {
+  height: 300px;
+  width: 300px;
+  border: none;
+}
+main .globes .box-globes textarea {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: 250px;
+  margin: 20px;
+  background: #131416;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 10px;
+  resize: none;
+  color: white;
+}
+main .globes .box-globes [id=cleared] {
+  margin-top: 4em;
+}
+main .globes .box-globes textarea:focus {
+  border-color: #8fa423;
+}
+main .globes .box-globes button {
+  position: relative;
+  padding: 8px 20px;
+  border: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  font-weight: bold;
+  color: #FFF;
+  background: #131416;
+  transition: background 0.275s;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px #F66822;
+  cursor: pointer;
+}
+main .globes .box-globes button:hover,
+main .globes .box-globes button:focus {
+  background: #F66822;
+}
+main .globes .box-globes p {
+  margin-top: 3.25em;
+  font-size: 0.825em;
+  color: #777;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+main .globes .copiedtext {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-1em);
+  color: #000;
+  transition: all 0.5s;
+}
+main .globes .copied .copiedtext {
+  opacity: 1;
+  transform: translateY(-2em);
+}
+main .popup-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .popup-section div {
+  width: 50%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .popup-section .text-section {
+  padding: 50px;
+  margin-left: 50px;
+  color: white;
+  font-size: 20px;
+}
+main .popup-section .text-section .buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+}
+main .popup-section .text-section .buttons a:nth-child(1) {
+  text-decoration: none;
+  padding: 8px 20px;
+  background-color: #F66822;
+  margin: 10px 5px 0 0;
+  border-radius: 25px;
+  color: white;
+  font-family: "Baloo Thambi 2", cursive;
+}
+main .popup-section .text-section .buttons a:nth-child(2) {
+  text-decoration: none;
+  padding: 8px 20px;
+  background-color: transparent;
+  border: 2px solid #F66822;
+  margin: 10px 5px 0 0;
+  border-radius: 25px;
+  color: #F66822;
+  font-family: "Baloo Thambi 2", cursive;
+}
+main .popup-section .content {
+  max-width: 100%;
+  width: 100%;
+}
+main .popup-section .content button {
+  margin-bottom: 15px;
+}
+main .backgrounds {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+main .backgrounds img {
+  width: 600px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+main .backgrounds img:hover {
+  transform: scale(0.9);
+}
+main .codepen {
+  padding: 50px;
+}
+main .codepen iframe {
+  margin: 20px 0;
+}
+
+/* END -  Main CSS */
 
 /*# sourceMappingURL=styles.css.map */

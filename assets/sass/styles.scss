@@ -1,9 +1,9 @@
-/* Imports */
+/* Imports FONTS / VARIABLES */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700&family=Bree+Serif&display=swap');
 @import "colors";
+@import "popup";
 
-/* START - Configurações Gerais */
-
+/* START - RESETS */
 * {
     padding: 0;
     margin: 0;
@@ -21,13 +21,13 @@ button,
 a,
 textarea {
     font-family: 'Baloo Thambi 2', cursive;
+    text-decoration: none;
 }
-
-/* END - Configurações Gerais */
+/* END - RESETS */
 
 
 /* START - Main CSS */
-
+/* START - Barra lateral */
 aside {
     background-color: $secondary-bg;
     width: 12%;
@@ -40,10 +40,12 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .logo {
         width: 200px;
         margin: 30px 0;
     }
+
     nav {
         width: 100%;
         margin-left: 30px;
@@ -59,6 +61,7 @@ aside {
             }
         }
     }
+
     button {
         background-color: #313131;
         color: $orange;
@@ -74,7 +77,9 @@ aside {
         cursor: pointer;
     }
 }
+/* END - Barra lateral */
 
+/* START - MAIN CSS */
 main {
     width: 88%;
     right: 0;
@@ -82,8 +87,36 @@ main {
     position: absolute;
     padding: 50px;
 
-    /* START - POPUP */
+    /* START - Seções com título GLOBAL */
+    .title-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 120px;
+        padding-bottom: 30px;
+        color: white;
+        h2 {
+            font-size: 44px;
+        }
+        .divider {
+            background-color: $orange;
+            width: 60px;
+            height: 5px;
+            border-radius: 25px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 20px;
+        }
+        a {
+            color: $orange;
+            text-decoration: none;
+        }
+    }
+    /* END - Seções com título GLOBAL */
 
+    /* START - POPUP */
     .editor-container {
         width: 700px;
         height: 540px;
@@ -101,16 +134,29 @@ main {
         width: 100%;
         font-size: 20px;
     }
-
     /* END - POPUP */
     
+    /* START - BANNER */
     .banner {
         display: flex;
         width: 100%;
+        height: 98vh;
 
         /* Banner Content */
         .banner-title {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 30px;
+            justify-content: space-around;
+            .banner-title-content {
+                width: 100%;
+                max-width: 100%;
+                .title-orange {
+                    color: $orange;
+                    text-shadow: 0px 0px 10px $orange
+                }
+            }
             h2 {
                 font-size: 50px;
                 color: white;
@@ -178,21 +224,27 @@ main {
             .content {
                 position: absolute;
                 width: 300px;
-                background-color: white;
-                right: 10%;
-                padding: 50px;
+                background-color: $orange;
+                right: 0%;
+                top: 45%;
+                padding: 30px;
                 border-radius: 10px 20px 10px 20px;
+                z-index: 99;
+                font-family: 'Baloo Thambi 2', cursive;
             }
-            .img-hero {
-                width: 400px;
-                height: 600px;
-                object-fit: cover;
+
+            h2, p {
+                color: white;
+                font-family: 'Baloo Thambi 2', cursive;
+                line-height: 20px;
+                font-size: 18px;
             }
         }
-    }
-    
+    } 
+    /* END - BANNER */
+
+    /* START - GLOBES */
     .globes {
-        padding: 120px 0;
         display: flex;
 
         h2 {
@@ -243,19 +295,20 @@ main {
                 position: relative;
                 padding: 8px 20px;
                 border: 0;
-                font-size: 0.835em;
+                font-size: 18px;
                 text-transform: uppercase;
                 letter-spacing: 0.125em;
                 font-weight: bold;
                 color: #FFF;
                 background: #131416;
                 transition: background .275s;
-                border-radius: 20px;
+                border-radius: 25px;
                 box-shadow: 0px 0px 10px $orange;
+                cursor: pointer;
             }
             button:hover,
             button:focus {
-                background: #74861A;
+                background: $orange;
             }
             
             p {
@@ -280,108 +333,99 @@ main {
                 opacity: 1;
                 transform: translateY(-2em);
             }
-        
         }
-    }
+        .popup-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            div {
+                width: 50%;
+                max-width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;   
+            }
+            .text-section {
+                padding: 50px;
+                margin-left: 50px;
+                color: white;
+                font-size: 20px;
+                .buttons {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    width: 100%;
+                    max-width: 100%;
+                    a:nth-child(1) {
+                        text-decoration: none;
+                        padding: 8px 20px;
+                        background-color: $orange;
+                        margin: 10px 5px 0 0;
+                        border-radius: 25px;
+                        color: white;
+                        font-family: 'Baloo Thambi 2', cursive;
+                    }
+                    a:nth-child(2) {
+                        text-decoration: none;
+                        padding: 8px 20px;
+                        background-color: transparent;
+                        border: 2px solid $orange;
+                        margin: 10px 5px 0 0;
+                        border-radius: 25px;
+                        color: $orange;
+                        font-family: 'Baloo Thambi 2', cursive;
+                    }
+                }
+            }
+            .content {
+                max-width: 100%;
+                width: 100%;
+                button {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        /* END - GLOBES */
+
+        /* START - BACKGROUNDS */
+        .backgrounds {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            img {
+                width: 600px;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: all 0.5s ease;
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+            
+        }
+        /* END - BACKGROUNDS */
     
-   
+
+        /* START - CODEPEN */
+        .codepen {
+            padding: 50px;
+            iframe {
+                margin: 20px 0;
+            }
+        }
+        /* END - CODEPEN */
+
+}
 /* END -  Main CSS */ 
+    
+
+
+
+   
+
   
-  // popup
-  
-  .popup {
-      position: fixed;
-      inset: 0;
-      z-index: 100 !important;
-      width: 100%;
-      height: 100%;
-      padding: 30px 15px;
-      color: #000;
-      visibility: hidden;
-      transition: visibility 0.8s ease 0s;
-  
-      &::before {
-          content: "";
-          position: fixed;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.9);
-          opacity: 0;
-          transition: opacity 0.8s ease 0s;
-      }
-  
-      &__content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          flex: 1 1 auto;
-          width: 100%;
-          min-height: 100%;
-      }
-  
-      &__body {
-          width: 100%;
-          max-width: 800px;
-          padding: 50px;
-          background-color: $grey-box;
-          border-radius: 5px;
-          transform: scale(0);
-          transition: all 0.3s ease 0s;
-      }
-  
-      &__close {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          z-index: 30;
-          width: 20px;
-          height: 20px;
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-  
-          &::after,
-          &::before {
-              content: "";
-              position: absolute;
-              right: 0;
-              width: 100%;
-              height: 0.125rem;
-              background-color: #000;
-              transition: all 0.3s ease 0s;
-          }
-  
-          &::after {
-              bottom: calc(50% - 0.0625rem);
-              transform: rotate(45deg);
-          }
-  
-          &::before {
-              top: calc(50% - 0.0625rem);
-              transform: rotate(-45deg);
-          }
-      }
-  
-      &__text {
-          font-size: 26px;
-          font-weight: 600;
-          text-align: center;
-      }
-  
-      &.show {
-          visibility: visible;
-          overflow: auto;
-          z-index: 100;
-  
-          &::before {
-              opacity: 1;
-          }
-  
-          .popup__body {
-              transform: scale(1);
-              transition: all 0.3s ease 0.2s;
-          }
-      }
-  }
+
